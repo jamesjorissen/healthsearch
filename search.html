@@ -5,9 +5,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Health Search</title>
 
-    <link  href="https://fonts.googleapis.com/css?family=QuickSand:500" rel ="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-
+  </head>
     <div class="wrapper">
         <nav>
           <div class="logo">HEALTH . SEARCH</div>
@@ -17,9 +16,99 @@
           </ul>
          </nav>
        </div>
-  
+       <!-- Div for search form-->
+       
+       <div class="container">
+        <form action="action_page.php">
+          <div class="row">
+            <div class="col-25">
+                    <label for="condition">Condition</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="condition" name="condition" placeholder="Your Condition">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="gender">Gender</label>
+            </div>
+            <div class="col-75">
+              <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="ptype">Property Type</label>
+            </div>
+            <div class="col-75">
+              <select id="ptype" name="ptype">
+                <option value="optionA">Option A</option>
+                <option value="optionB">Option B</option>
+                <option value="optionC">Option C</option>
+                <option value="optionD">Option D</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="provider">Provider Specialty</label>
+            </div>
+            <div class="col-75">
+              <select id="provider" name="provider">
+                <option value="option1">Internal Medicine</option>
+                <option value="option2">Critcal Care</option>
+                <option value="option3">Ednocrinology, Diabetes &</option>
+                <option value="option4">Medical Oncology</option>
+                <option value="option5">Obstetrics & Gynecology</option>
+                <option value="option6">Psychology</option>
+                <option value="option7">Addiction (Substance Use)</option>
+                <option value="option8">Counseling</option>
+                <option value="option9">Pediatrics</option>
+                <option value="option10">Dentist-General Practice</option>
+                <option value="option11">Pediatric Dentistry</option>
+                <option value="option12">Orthodontics</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                    <label for="adress">Address</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="address" name="address" placeholder="Your Address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+            <div class="row">
+                <div class="col-90">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15689.559154438075!2d-93.27580428924955!3d44.983717899167075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1597512665582!5m2!1sen!2sus" 
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" 
+        tabindex="0"></iframe></div>
+      </div>
+
+
+      <!--div to hold map--> 
+    <!-- <div id="map" class="container"><img id="search-map" src= "" alt= "">
+
+    </div>
        <section class="sec1"></section>
-       <section class="content"><p></p></section>
+       <section class="content"><p></p></section> -->
+
+       
   
        <script type="text/javascript">
         $(window).on('scroll', function(){
@@ -34,7 +123,6 @@
   
         
         </script>
-  
+  <script src="script.js"></script>
     </body>
   </html>
-  
