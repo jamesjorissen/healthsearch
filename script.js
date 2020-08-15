@@ -1,7 +1,7 @@
 
-const mqKey = "6lZmnzDUcnk10BAOtzW6GtQcqCOQf8QZ";
+const mqKey = "AIzaSyDVuUfCLiTCAPrSIz8gY61O7HkUzoTRef0";
 const mqQuery =
-  "http://open.mapquestapi.com/geocoding/v1/address?key=" +
+  "https://www.google.com/maps/embed/v1/place?key=" +
   mqKey +
   "&location=Washington,DC";
 
@@ -16,16 +16,16 @@ $.ajax({
 
   mapIconEl.attr("src", mapURL);
 
-//API search doctor data
-$.ajax({
-  url: "https://data.cms.gov/resource/3zix-38y3.json",
-  type: "GET",
-  data: {
-    $limit: 5000,
-    $$app_token: "8dTNuiCg8YismLRhtgUBYsZkb",
-  },
-}).done(function (data) {
-  alert("Retrieved " + data.length + " records from the dataset!");
-  console.log(data);
+  //API search doctor data
+  $.ajax({
+    url: "https://data.cms.gov/resource/3zix-38y3.json",
+    type: "GET",
+    data: {
+      $limit: 5000,
+      $$app_token: "8dTNuiCg8YismLRhtgUBYsZkb",
+    },
+  }).done(function (data) {
+    alert("Retrieved " + data.length + " records from the dataset!");
+    console.log(data);
 
-});
+  });
