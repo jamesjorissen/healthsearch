@@ -35,9 +35,10 @@
               <label for="gender">Gender</label>
             </div>
             <div class="col-75">
-              <select id="gender" name="gender">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+              <select class="gender" name="gender">
+                <option>Any</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
               </select>
             </div>
           </div>
@@ -59,19 +60,35 @@
               <label for="provider">Provider Specialty</label>
             </div>
             <div class="col-75">
-              <select id="provider" name="provider">
-                <option value="option1">Internal Medicine</option>
-                <option value="option2">Critcal Care</option>
-                <option value="option3">Ednocrinology, Diabetes &</option>
-                <option value="option4">Medical Oncology</option>
-                <option value="option5">Obstetrics & Gynecology</option>
-                <option value="option6">Psychology</option>
-                <option value="option7">Addiction (Substance Use)</option>
-                <option value="option8">Counseling</option>
-                <option value="option9">Pediatrics</option>
-                <option value="option10">Dentist-General Practice</option>
-                <option value="option11">Pediatric Dentistry</option>
-                <option value="option12">Orthodontics</option>
+              <select class="provider">
+                <option>Any</option>
+                <option value="Allergy/Immunology">Allergy/Immunology</option>
+                <option value="Anesthesiology">Anesthesiology</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Chiropractic">Chiropractic</option>
+                <option value="Dermatology">Dermatology</option>
+                <option value="Diagnostic%20Radiology">Diagnostic Radiology</option>
+                <option value="Emergency%20Medicine">Emergency Medicine</option>
+                <option value="Family%20Practice">Family Practice</option>
+                <option value="Gastroenterology">Gastroenterology</option>
+                <option value="General%20Practice">General Practice</option>
+                <option value="General%20Surgery">General Surgery</option>
+                <option value="Geriatric%20Medicine">Geriatric Medicine</option>
+                <option value="Internal%20Medicine">Internal Medicine</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Nurse%20Practitioner">Nurse Practitioner</option>
+                <option value="CRNA">Nurse anesthetist</option>
+                <option value="Obstetrics/Gynecology">Obstetrics/Gynecology</option>
+                <option value="Ophthalmology">Ophthalmology</option>
+                <option value="Optometry">Optometry</option>
+                <option value="Orthopedic%20Surgery">Orthopedic Surgery</option>
+                <option value="Otolaryngology">Otolaryngology</option>
+                <option value="Pathology">Pathology</option>
+                <option value="Physical%20Therapist">Physical Therapist</option>
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Radiation%20Oncology">Radiation Oncology</option>
+                <option value="Rheumatology">Rheumatology</option>
+                <option value="Thoracic%20Surgery">Thoracic Surgery</option>
               </select>
             </div>
           </div>
@@ -80,7 +97,83 @@
                     <label for="adress">Address</label>
             </div>
             <div class="col-75">
-              <input type="text" id="address" name="address" placeholder="Your Address">
+              <input class="address" type="text" name="address" placeholder="Your Address">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                    <label for="zip code">Zip Code</label>
+            </div>
+            <div class="col-75">
+              <input class="zip-code" type="text" name="zip code" placeholder="Your zip code">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                    <label for="city">City</label>
+            </div>
+            <div class="col-75">
+              <input class="city"  type="text" name="city" placeholder="Your city">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="state">State</label>
+            </div>
+            <div class="col-75">
+              <select class="state" name="state">
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+              </select>
             </div>
           </div>
           <div class="row">
@@ -92,7 +185,7 @@
             </div>
           </div>
           <div class="row">
-            <input type="submit" value="Submit">
+            <input class="search" type="button" value="Submit">
           </div>
         </form>
             <div class="row">
