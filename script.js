@@ -1,21 +1,3 @@
-// const mqKey = "AIzaSyDVuUfCLiTCAPrSIz8gY61O7HkUzoTRef0";
-// const mqQuery =
-//   "https://www.google.com/maps/embed/v1/place?key=" +
-//   mqKey +
-//   "&location=Washington,DC";
-
-// $.ajax({
-//   url: mqQuery,
-//   method: "GET",
-// }).then(function (response) {
-//   console.log(response);
-
-//   var mapIconEl = $("#search-map");
-//   //var mapURL = response.;
-
-//   mapIconEl.attr("src", mapURL);
-// });
-
 //Doctor search and user address information
 const DocAPIKey = "8dTNuiCg8YismLRhtgUBYsZkb";
 var docSearchUrl = "https://data.cms.gov/resource/3zix-38y3.json?";
