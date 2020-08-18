@@ -34,6 +34,7 @@ body {
   padding: 0;
   /* font-family: QuickSand; */
 }
+
 nav {
   position: fixed;
   top: 0;
@@ -61,13 +62,23 @@ section.sec1 {
   line-height: 30px;
 }
 
+#icon {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+  float: left;
+}
+
 nav .logo {
   padding: 22px 20px;
   height: 80px;
   float: left;
   font-size: 24px;
   transition: 0.3s;
+  color: gray;
 }
+
 nav ul {
   list-style: none;
   float: right;
@@ -81,7 +92,6 @@ nav ul li {
 
 nav ul li a {
   line-height: 80px;
-  color: black;
   padding: 12px 30px;
   text-decoration: none;
   text-transform: uppercase;
@@ -272,6 +282,7 @@ nav {
   padding: 10px 100px;
   box-sizing: border-box;
   transition: 0.3s;
+  background-color: teal;
 }
 
 section.sec1 {
