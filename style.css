@@ -10,7 +10,7 @@ html {
     url("https://www.unitypoint.org/filesimages/Articles/July%202017/Cred700.jpg");
 
   /* Set a specific height */
-  height: 50%;
+  height: 100%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -55,9 +55,12 @@ section.sec1 {
   margin-top: 80px;
 }
 .content p {
-  width: 900px;
-  margin: 30px auto;
-  text-align: justify;
+  text-align: center;
+  position: absolute;
+  background-color: gray;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 20px;
   line-height: 30px;
 }
