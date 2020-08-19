@@ -44,42 +44,41 @@ window.onload = function () {
       center: { lat: mapLat, lng: mapLng },
     };
 
-    //new map
+    // creating new map and attaching to DOM
     var map = new google.maps.Map(document.getElementById("map"), options);
 
-    //array of markers
-    var markers = [
-      {
-        coords: { lat: 44.9227, lng: -93.3294 },
-        content: "<h4>44th and France</h4>",
-      },
-      {
-        coords: { lat: 44.9778, lng: -93.265 },
-        content: "<h4>Minneapolis</h4>",
-      },
-      {
-        coords: { lat: 44.922, lng: -93.3062 },
-        content: "<h4>Lake Harriet</h4>",
-      },
-    ];
+    //pulling doctor coordinates and addresses to generate map markers
+    var docCoords = localStorage.getItem("docLocation");
+    var markerCoords = JSON.parse(docCoords);
 
-    //loop through markers
-    for (var i = 0; i < markers.length; i++) {
+    //pulling address info to populate info windows on the markers
+    var docContent = localStorage.getItem("docInfo");
+    console.log(docContent);
+    var markerContent = JSON.parse(docContent);
+    console.log(markerContent);
+
+    //loop through markerCoords
+    for (var j = 0; j < markerCoords.length; j++) {
       //add marker
-      addMarker(markers[i]);
+      addMarker(markerCoords[j]);
     }
 
     //add marker function
-    function addMarker(props) {
+    function addMarker(markerCoords) {
       var marker = new google.maps.Marker({
-        position: props.coords,
+        position: markerCoords,
         map: map,
       });
 
+      //loop through markerContent
+      for (var k = 0; k < markerContent.length; k++) {
+        addInfo(markerContent[i]);
+        console.log(markerContent[i]);
+      }
       //check for content window
-      if (props.content) {
+      function addInfo(markerContent) {
         var infoWindow = new google.maps.InfoWindow({
-          content: props.content,
+          content: markerContent,
         });
 
         //event
