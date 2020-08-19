@@ -54,7 +54,7 @@ $(".search").on("click", function () {
       var streetNumber = split[0];
       var streetName = split[1];
       for (var j = 2; j < split.length; j++) streetName += " " + split[j];
-      //Setting doctor info to local storage
+
       var docInfoObj = {
         firstName: firstName,
         lastName: lastName,
@@ -87,7 +87,6 @@ $(".search").on("click", function () {
         method: "GET",
       }).then(function (response) {
         var docLatLng = response.results[0].geometry.location;
-        //Setting doctor address to local storage
         var docLatLngString = JSON.stringify(docLatLng);
         var docLatLngString = JSON.stringify(docLatLng);
         var docLatLngParse = JSON.parse(docLatLngString);
@@ -131,7 +130,6 @@ $(".search").on("click", function () {
     method: "GET",
   }).then(function (response) {
     var userLatLng = response.results[0].geometry.location;
-    //Setting user address to local storage
     var userLatLngString = JSON.stringify(userLatLng);
     var userLatLngParse = JSON.parse(userLatLngString);
     var userLocationObj = {
