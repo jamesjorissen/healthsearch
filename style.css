@@ -51,18 +51,12 @@ section.sec1 {
   width: 100%;
   height: 100vh;
 }
-.content {
-  margin-top: 80px;
-}
-.content p {
-  text-align: center;
-  position: absolute;
+
+.work-feature-block {
+  padding: 10px 0;
+  border-top: 1px solid #cacaca;
+  color: white;
   background-color: gray;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 20px;
-  line-height: 30px;
 }
 
 #icon {
