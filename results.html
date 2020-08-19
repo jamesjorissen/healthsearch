@@ -11,6 +11,7 @@
         height: 100%;
         width: 50%;
         float: right;
+        top: 5%;
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -30,117 +31,18 @@
       <body>
 
         <style>
-          #wrapper { position: relative; top: 20%; left: 30px; }
-          #over_map { position: absolute; top: 5%; left: 50%; z-index: 99; }
+          #wrapper { position: relative; top: 20%; right: 30px; }
+          #over_map { position: absolute; top: 5%; right: 50%; z-index: 99; }
        </style>
 
-       <!-- Created iframe to display map -->
-       <div id="wrapper">
-          <div id="google_map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15689.559154438075!2d-93.27580428924955!3d44.983717899167075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1597512665582!5m2!1sen!2sus" 
-            width="700" height="550" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" 
-            tabindex="0"></iframe>
-       
           </div>
        <!-- Retrieved data will be dumped here -->
           <div id="over_map">
-            <div class="container-2">
-              <div class="drName">Doctor Name: </div>
-              <div class="city">City: </div>
-              <div class="provider">Provider: </div>
-              <div class="gender">Gender: </div>
-              <div class="address">Address: </div>
-              <div class="state">State: </div>
-       
           </div>
-       </div>
-      
-
-      <!-- Created iframe to display map -->
-      
-        <!-- <div class="col-90">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15689.559154438075!2d-93.27580428924955!3d44.983717899167075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1597512665582!5m2!1sen!2sus" 
-width="1000" height="900" frameborder="0" style="border:0" allowfullscreen="" aria-hidden="false" 
-tabindex="0" ></iframe></div> -->
-      
-            <section class="sec1"></section>
-            <div id="map"></div>
-       <section class="content"><p></p></section>
-
-
-        </script>
-        <script>
-          //initialize GoogleMaps
-  function initMap() {
-    //map options
-    var options = {
-      zoom: 12,
-      center: { lat: 44.9778, lng: -93.265 },
-    };
-
-    //new map
-    var map = new google.maps.Map(document.getElementById("map"), options);
-    /*
-    //add marker; places a generic marker at a given coordinate
-    var marker = new google.maps.Marker({
-      position: {lat:44.9227,lng:-93.3294},
-      map: map
-    });
-    
-    //info window to desiplay on an event
-    var infoWindow = new google.maps.InfoWindow({
-      content:'<h1>44th and France</h1>'
-    });
-
-    //event
-    marker.addListener("click", function() {
-      infoWindow.open(map, marker);
-    });*/
-    //array of markers
-    var markers = [
-      {
-        coords: { lat: 44.9227, lng: -93.3294 },
-        content: "<h4>44th and France</h4>",
-      },
-      {
-        coords: { lat: 44.9778, lng: -93.265 },
-        content: "<h4>Minneapolis</h4>",
-      },
-      {
-        coords: { lat: 44.922, lng: -93.3062 },
-        content: "<h4>Lake Harriet</h4>",
-      },
-    ];
-
-    //loop through markers
-    for (var i = 0; i < markers.length; i++) {
-      //add marker
-      addMarker(markers[i]);
-    }
-
-    //add marker function
-    function addMarker(props) {
-      var marker = new google.maps.Marker({
-        position: props.coords,
-        map: map,
-      });
-
-      //check for content window
-      if (props.content) {
-        var infoWindow = new google.maps.InfoWindow({
-          content: props.content,
-        });
-
-        //event
-        marker.addListener("click", function () {
-          infoWindow.open(map, marker);
-        });
-      }
-    }
-  }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5H3l2SUF57sMCx9XKBwt52s8sDaw4CDE&callback=initMap"></script>
-        <script src="script.js"></script>
+          <div id="map"></div>
+           
+        
+        <script src="results.js"></script>
     </body>
   </html>
   
