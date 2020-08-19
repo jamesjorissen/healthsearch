@@ -79,7 +79,7 @@ nav .logo {
   float: left;
   font-size: 24px;
   transition: 0.3s;
-  color: gray;
+  color: black;
 }
 
 nav ul {
@@ -439,11 +439,12 @@ input[type="submit"] {
 
 .container-2 {
   z-index: -1;
-  margin-top: 10%;
+  margin-top: 5%;
   border-radius: 5px;
-  background-color: white;
+  /* background-color: white; */
   padding: 30px;
   margin-inline-start: 30px;
+  float: right;
 }
 
 .drName {
