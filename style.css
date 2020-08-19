@@ -404,6 +404,8 @@ input[type="submit"] {
 
 /* Floating column for inputs: 75% width */
 .col-75 {
+  display: flex;
+  align-items: center;
   float: left;
   width: 75%;
   margin-top: 6px;
