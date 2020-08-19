@@ -53,7 +53,6 @@ window.onload = function () {
 
     //pulling address info to populate info windows on the markers
     var docContent = localStorage.getItem("docInfo");
-    console.log(docContent);
     var markerContent = JSON.parse(docContent);
     console.log(markerContent);
 
@@ -72,14 +71,20 @@ window.onload = function () {
 
       //loop through markerContent
       for (var k = 0; k < markerContent.length; k++) {
-        addInfo(markerContent[i]);
-        console.log(markerContent[i]);
+        addInfo(name, address, city, zip);
+        var name =
+          "DR. " + markerContent[k].firstName + " " + markerContent[k].lastName;
+        var address = markerContent[k].address;
+        var city = markerContent[k].city;
+        var zip = markerContent[k].zipCode;
+        console.log(name, address, city, zip);
       }
       //check for content window
-      function addInfo(markerContent) {
+      function addInfo(name, address, city, zip) {
         var infoWindow = new google.maps.InfoWindow({
-          content: markerContent,
+          content: (name, address, city, zip),
         });
+        console.log(name, address, city, zip);
 
         //event
         marker.addListener("click", function () {

@@ -65,6 +65,7 @@ section.sec1 {
   max-height: 72px;
   max-width: 250px;
   float: left;
+  margin: -20px;
 }
 
 nav .logo {
