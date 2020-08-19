@@ -15,21 +15,39 @@
   </style>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   </head>
-    <div class="wrapper">
-        <nav>
-          <div class="logo">HEALTH . SEARCH</div>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a class="active" href="#">Search</a></li>
-            <li><a href="./results.html">Results</a></li>
-           
-          </ul>
-         </nav>
-       </div>
+  <div class="wrapper">
+    <nav>
+      <div class="logo"><img src= "assets/HS Icon transparent.png" id="icon">HEALTH . SEARCH</div>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a class="active" href="./search.html">Search</a></li>
+        <li><a href="./results.html">Results</a></li>
+      </ul>
+     </nav>
+   </div>
        <!-- Div for search form-->
        <div class="container">
         <form action="action_page.php">
-          <!--Provider search parameters-->
+          <div class="row">
+            <div class="col-25">
+                <label for="condition">Condition</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="condition" name="condition" placeholder="Your Condition">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="gender">Provider Gender</label>
+            </div>
+            <div class="col-75">
+              <select class="gender" name="gender">
+                <option>Any</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div>
           <div class="row">
             <div class="col-25">
               <label for="provider">Provider Specialty</label>
@@ -91,6 +109,7 @@
          
           <div class="row">
             <div class="col-25">
+
                     <label for="city">City</label>
             </div>
             <div class="col-75">
@@ -166,8 +185,8 @@
             </div>
           </div>
           <div class="row">
+            <a href="./results.html">
             <input class="search" type="button" value="Submit" />
-            <a href="./results.html"></a>
           </div>
         </form>
   <script src="script.js"></script>
