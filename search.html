@@ -6,7 +6,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Health Search</title>
-
+    <style>#map{
+      height: 100%;
+      width: 50%;
+      float: right;
+      top: 10%;
+    }
+  </style>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   </head>
   <div class="wrapper">
@@ -20,7 +26,6 @@
      </nav>
    </div>
        <!-- Div for search form-->
-       
        <div class="container">
         <form action="action_page.php">
           <div class="row">
@@ -80,6 +85,19 @@
               </select>
             </div>
           </div>
+          <div class="row"> 
+            <div class="col-25">
+              <label for="gender">Provider Gender (optional)</label>
+            </div>
+            <div class="col-75">
+              <select class="gender" name="gender">
+                <option>Any</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div> 
+          <!--Location search parameters-->
           <div class="row">
             <div class="col-25">
                     <label for="adress">Address</label>
@@ -88,8 +106,10 @@
               <input class="address" type="text" name="address" placeholder="Your Address">
             </div>
           </div>
+         
           <div class="row">
             <div class="col-25">
+
                     <label for="city">City</label>
             </div>
             <div class="col-75">
@@ -171,15 +191,32 @@
         </form>
   <script src="script.js"></script>
     </body>
-  </html>
-
-        <!--div to hold map--> 
-    <!-- <div id="map" class="container"><img id="search-map" src= "" alt= "">
-
+    <div class="footer">
+      <p>Team Cantaloupe Productions<span><br></br></span> DOB: August, 2020</p>
     </div>
-       <section class="sec1"></section>
-       <section class="content"><p></p></section> 
+  </html>
+  
+
+          <input class="search" type="button" value="Submit" />
+          
+        </form>
+       </div>
+       
+        
+  
+       <script type="text/javascript">
+        $(window).on('scroll', function(){
+          if($(window).scrollTop()){
+            $('nav').addClass('black');
+          }
+          else {
+            $('nav').removeClass('black');
+          }
+        })
   
   
         
         </script>
+  <script src="script.js"></script>
+    </body>
+  </html>
