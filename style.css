@@ -10,7 +10,7 @@ html {
     url("https://www.unitypoint.org/filesimages/Articles/July%202017/Cred700.jpg");
 
   /* Set a specific height */
-  height: 100%;
+  height: 50%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -39,7 +39,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 10;
   width: 100%;
   height: 100px;
   padding: 10px 100px;
@@ -53,7 +53,7 @@ section.sec1 {
 }
 
 .work-feature-block {
-  padding: 10px 0;
+  padding: 30px 0;
   border-top: 1px solid #cacaca;
   color: white;
   background-color: gray;
@@ -272,6 +272,7 @@ body {
 }
 nav {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
@@ -481,6 +482,7 @@ input[type="submit"] {
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 10;
   width: 100%;
   background-color: teal;
   color: white;
