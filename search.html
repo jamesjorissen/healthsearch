@@ -6,57 +6,30 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Health Search</title>
-
+    <style>#map{
+      height: 100%;
+      width: 50%;
+      float: right;
+      top: 10%;
+    }
+  </style>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   </head>
-  <div class="wrapper">
-    <nav>
-      <div class="logo">HEALTH . SEARCH</div>
-      <ul>
-        <li><img src= "assets/HS Icon transparent.png" id="icon"></li>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./search.html">Search</a></li>
-        <li><a class="active" href="#">Results</a></li>
-      </ul>
-     </nav>
-   </div>
+    <div class="wrapper">
+        <nav>
+          <div class="logo">HEALTH . SEARCH</div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a class="active" href="#">Search</a></li>
+            <li><a href="./results.html">Results</a></li>
+           
+          </ul>
+         </nav>
+       </div>
        <!-- Div for search form-->
-       
        <div class="container">
         <form action="action_page.php">
-          <div class="row">
-            <div class="col-25">
-                    <label for="condition">Condition</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="condition" name="condition" placeholder="Your Condition">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="gender">Gender</label>
-            </div>
-            <div class="col-75">
-              <select class="gender" name="gender">
-                <option>Any</option>
-                <option value="M">Male</option>
-                <option value="F">Female</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="ptype">Property Type</label>
-            </div>
-            <div class="col-75">
-              <select id="ptype" name="ptype">
-                <option value="optionA">Option A</option>
-                <option value="optionB">Option B</option>
-                <option value="optionC">Option C</option>
-                <option value="optionD">Option D</option>
-              </select>
-            </div>
-          </div>
+          <!--Provider search parameters-->
           <div class="row">
             <div class="col-25">
               <label for="provider">Provider Specialty</label>
@@ -94,6 +67,19 @@
               </select>
             </div>
           </div>
+          <div class="row"> 
+            <div class="col-25">
+              <label for="gender">Provider Gender (optional)</label>
+            </div>
+            <div class="col-75">
+              <select class="gender" name="gender">
+                <option>Any</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+          </div> 
+          <!--Location search parameters-->
           <div class="row">
             <div class="col-25">
                     <label for="adress">Address</label>
@@ -102,14 +88,7 @@
               <input class="address" type="text" name="address" placeholder="Your Address">
             </div>
           </div>
-          <div class="row">
-            <div class="col-25">
-                    <label for="zip code">Zip Code</label>
-            </div>
-            <div class="col-75">
-              <input class="zip-code" type="text" name="zip code" placeholder="Your zip code">
-            </div>
-          </div>
+         
           <div class="row">
             <div class="col-25">
                     <label for="city">City</label>
@@ -180,10 +159,10 @@
           </div>
           <div class="row">
             <div class="col-25">
-              <label for="subject">Subject</label>
+                    <label for="zip code">Zip Code</label>
             </div>
             <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <input class="zip-code" type="text" name="zip code" placeholder="Your zip code">
             </div>
           </div>
           <div class="row">
@@ -199,13 +178,26 @@
   </html>
   
 
-        <!--div to hold map--> 
-    <!-- <div id="map" class="container"><img id="search-map" src= "" alt= "">
-
-    </div>
-       <section class="sec1"></section>
-       <section class="content"><p></p></section> 
+          <input class="search" type="button" value="Submit" />
+          
+        </form>
+       </div>
+       
+        
+  
+       <script type="text/javascript">
+        $(window).on('scroll', function(){
+          if($(window).scrollTop()){
+            $('nav').addClass('black');
+          }
+          else {
+            $('nav').removeClass('black');
+          }
+        })
   
   
         
         </script>
+  <script src="script.js"></script>
+    </body>
+  </html>
