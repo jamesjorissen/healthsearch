@@ -3,6 +3,8 @@ const googleKey = "AIzaSyC5H3l2SUF57sMCx9XKBwt52s8sDaw4CDE";
 var docSearchUrl = "https://data.cms.gov/resource/3zix-38y3.json?";
 var googleBaseURL =
   "https://maps.googleapis.com/maps/api/geocode/json?address=";
+var booDoc = false;
+var booUser = false;
 
 $(".search").on("click", function () {
   //Type of provider
@@ -37,7 +39,7 @@ $(".search").on("click", function () {
       $limit: 5,
       $$app_token: DocAPIKey,
     },
-  }).done(function (data) {
+  }).then(function (data) {
     //Docotr search full data
     console.log(data);
     for (var i = 0; i < data.length; i++) {
@@ -96,6 +98,7 @@ $(".search").on("click", function () {
         };
         docLocation.push(docLocationObj);
         localStorage.setItem("docLocation", JSON.stringify(docLocation));
+        booDoc = true;
       });
     }
 
@@ -138,5 +141,9 @@ $(".search").on("click", function () {
     };
     userLocation.push(userLocationObj);
     localStorage.setItem("userLocation", JSON.stringify(userLocation));
+    booUser = true;
   });
+  if (booDoc === true && booUser === true) {
+    window.location.href = "./results.html";
+  }
 });
