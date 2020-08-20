@@ -33,7 +33,7 @@
               <label for="provider">Provider Specialty</label>
             </div>
             <div class="col-75">
-              <select>
+              <select class="provider">
                 <option>Any</option>
                 <option value="Allergy/Immunology">Allergy/Immunology</option>
                 <option value="Anesthesiology">Anesthesiology</option>
@@ -70,7 +70,7 @@
               <label for="gender">Provider Gender (optional)</label>
             </div>
             <div class="col-75">
-              <select name="gender">
+              <select class="gender">
                 <option>Any</option>
                 <option value="M">Male</option>
                 <option value="F">Female</option>
@@ -101,7 +101,7 @@
               <label for="state">State</label>
             </div>
             <div class="col-75">
-              <select  name="state">
+              <select  class="state">
                 <option value="AL">AL</option>
                 <option value="AK">AK</option>
                 <option value="AZ">AZ</option>
@@ -174,17 +174,6 @@
       <p>Team Cantaloupe Productions<span><br></br></span> est: August, 2020</p>
     </div>
 
-
-       <script type="text/javascript">
-        $(window).on('scroll', function(){
-          if($(window).scrollTop()){
-            $('nav').addClass('black');
-          }
-          else {
-            $('nav').removeClass('black');
-          }
-        })
-      </script>
   <script src="script.js"></script>
     </body>
   </html>
